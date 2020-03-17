@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<body>
+    <div id="News">
+    <h1>YOUR MONEY</h1>
+    <input type="search" class="form-control" id="data-search">
+    <button type="submit" class="btn btn-primary" id="search-button">Submit</button>
+    </div>
+
+    <div id="story"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    
+        $(document).ready(function(){
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-news?region=US&category=MSFT",
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "ce81aca087msh56dfbd45fc61707p19827bjsnb24f7ca049eb"
+                }
+            }
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+        fin        console.log(response.items.result[0].title)
+                console.log(response.items.result[0].publisher)
+                console.log(response.items.result[0].author)
+                console.log(response.items.result[0].summary)
+                console.log(response.items.result[0].content)
+            });       
+        });
+    </script>
+    <script src="js/news.js"></script>
+</body>
+</html>
