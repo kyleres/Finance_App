@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $("#searchBtn").on("click", function() {
+        event.preventDefault();
 
         var stock = $("#searchStock").val();
         var settings = {
