@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>STOCK Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+</head>
+  <body>
+    <div class="container">
+        <h1>STOCK SEARCHER</h1>
+    <form id="searchStock">
+        <div class="form-group">
+          <label for="SearchTerm1">Search Stock</label>
+          <input type="search" class="form-control" id="data-search" aria-describedby="emailHelp">
+        </div>
+        <!-- <button type="submit" class="btn btn-primary" id="button">Submit</button> -->
+    </form>
+    <ul class="results" style="list-style-type: none;"></ul>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+  
+    $('#searchStock').on('keyup', function(){
+        event.preventDefault();
+        var options = {
+            function: 'SYMBOL_SEARCH',
+            keywords: $(".form-control").val().trim(),
+            apikey: 'UFFJ7WKZ66L741SG'
+        }
+    
+        var queryURL = "https://www.alphavantage.co/query?" + $.param(options);
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response){
+            console.log(response)
+            let block = ''
+            for( let i = 0; i < 4; i++){
+                block += `<li data-name="${ response['bestMatches'][i]['1. symbol']}">${ response['bestMatches'][i]['2. name']} (${ response['bestMatches'][i]['1. symbol']}) </li>`
+            }
+            $('.results').html(block)
+            $('li').on('click', function(){
+                let searchKey = $(this).attr('data-name')
+                $('.form-control').val(searchKey)
+            })
+        })
+    })
+    })
+    </script>
+    
+  </body>
+</html>
