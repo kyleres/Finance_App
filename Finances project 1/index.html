@@ -23,26 +23,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
 
-        $(document).ready(function () {
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-news?region=US&category=MSFT",
-                "method": "GET",
-                "headers": {
-                    "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                    "x-rapidapi-key": "ce81aca087msh56dfbd45fc61707p19827bjsnb24f7ca049eb"
-                }
-            }
-            $.ajax(settings).done(function (response) {
-                console.log(response);
-                fin        console.log(response.items.result[0].title)
-                console.log(response.items.result[0].publisher)
-                console.log(response.items.result[0].author)
-                console.log(response.items.result[0].summary)
-                console.log(response.items.result[0].content)
-            });
-        });
+        
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
