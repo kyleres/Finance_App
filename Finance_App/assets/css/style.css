@@ -1,18 +1,21 @@
+
+body {
+    background-color: seagreen;
+}
 .header{
     margin: -2em 0;
 }
-.header h5 {
-    font-family: Open Sans;
+.header h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
     background-color: #555;
     color: #fff;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 1em;
 }
-
 
 .search {
     margin: 0px auto 50px auto;
@@ -20,8 +23,8 @@
 
 .search-button {
     width: 470px;
-    padding: 0 15px;
-    margin: 0px auto 130px auto;
+    padding: 15px;
+    margin: 8px auto 130px auto;
 }
 
 .search .search-button input {
@@ -68,12 +71,16 @@
     opacity: 0.8;
 }
 
+#searchBtn {
+    background-color: darkslategray;
+    margin: 0px 0px 8px 0px;
 
+}
 
 .search .search-button button:before {
     content: '';
     position: absolute;
-    border-width: 8px 8px 8px 0;
+    border-width: 8px 8px 8px 8px; 
     border-style: solid solid solid none;
     border-color: transparent #00918e transparent;
     top: 12px;
@@ -84,23 +91,24 @@ font-size: 1rem;
 }
 
 
-#stock {
+#stock, #news {
     background-color: #eeeeee;
     height: 400px;
     padding: 30px;
 }
 
-#news {
-    background-color: #eeeeee;
-    height: 400px;
-    padding: 30px;
-}
+
 
 /* footer */
 footer {
     background-color: #555;
     color: #fff;
-    padding: 1em 0;
+    padding: 1em;
     text-align: center;
 }
 
+/* search bar moved up.  Company name, still off to right.
+ */
+ /* news is not feeding into the boxes.  */
+
+ /* "li" is showing up when elementis examined in console.  */
