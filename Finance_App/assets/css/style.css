@@ -17,14 +17,13 @@ body {
     padding-bottom: 1em;
 }
 
-
 .search {
     margin: 0px auto 50px auto;
 }
 
 .search-button {
     width: 470px;
-    padding: 0 15px;
+    padding: 15px;
     margin: 0px auto 130px auto;
 }
 
@@ -79,7 +78,7 @@ body {
 .search .search-button button:before {
     content: '';
     position: absolute;
-    border-width: 8px 8px 8px 0;
+    border-width: 8px 8px 8px;
     border-style: solid solid solid none;
     border-color: transparent #00918e transparent;
     top: 12px;
@@ -102,6 +101,10 @@ font-size: 1rem;
 footer {
     background-color: #555;
     color: #fff;
-    padding: 1em 0;
+    padding: 1em;
     text-align: center;
 }
+
+/* search bar moved up.  Company name, still off to right.
+ */
+ /* news is not feeding into the boxes.  */
