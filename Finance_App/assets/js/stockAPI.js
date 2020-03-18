@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    let labels = []
     let data = []
       $("#searchBtn").on("click", function() {
         event.preventDefault();
@@ -11,12 +12,21 @@ $(document).ready(function(){
             console.log(response)
 
             for ( let i = 0; i < response.length; i++){
-                data.push({
-                    x: response[0].label,
-                    y: response[i].close
-                })
+                labels.push(response[i].label)
+                data.push(response[i].close)
             }
-            console.log(data)
+            var ctx = $('#myChart');
+            var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'StockPrice',
+                        data: data
+                    }]
+                },
+                options: {}
+            });
 
         })
 
