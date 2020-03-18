@@ -24,7 +24,7 @@ body {
 .search-button {
     width: 470px;
     padding: 15px;
-    margin: 0px auto 130px auto;
+    margin: 8px auto 130px auto;
 }
 
 .search .search-button input {
@@ -73,12 +73,14 @@ body {
 
 #searchBtn {
     background-color: darkslategray;
+    margin: 0px 0px 8px 0px;
+
 }
 
 .search .search-button button:before {
     content: '';
     position: absolute;
-    border-width: 8px 8px 8px;
+    border-width: 8px 8px 8px 8px; 
     border-style: solid solid solid none;
     border-color: transparent #00918e transparent;
     top: 12px;
