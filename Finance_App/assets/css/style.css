@@ -1,15 +1,19 @@
+
+body {
+    background-color: seagreen;
+}
 .header{
     margin: -2em 0;
 }
-.header h5 {
-    font-family: Open Sans;
+.header h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
     background-color: #555;
     color: #fff;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 1em;
 }
 
@@ -68,7 +72,9 @@
     opacity: 0.8;
 }
 
-
+#searchBtn {
+    background-color: darkslategray;
+}
 
 .search .search-button button:before {
     content: '';
@@ -84,17 +90,13 @@ font-size: 1rem;
 }
 
 
-#stock {
+#stock, #news {
     background-color: #eeeeee;
     height: 400px;
     padding: 30px;
 }
 
-#news {
-    background-color: #eeeeee;
-    height: 400px;
-    padding: 30px;
-}
+
 
 /* footer */
 footer {
@@ -103,4 +105,3 @@ footer {
     padding: 1em 0;
     text-align: center;
 }
-
