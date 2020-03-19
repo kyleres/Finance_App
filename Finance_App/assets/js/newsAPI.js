@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 $(document).ready(function() {
 
-    $("#searchBtn").on("click", function() {
+    $("button").on("click", function() {
         event.preventDefault();
 
         var stock = $("#searchStock").val();
