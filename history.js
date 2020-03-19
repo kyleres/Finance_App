@@ -8,7 +8,11 @@ $(document).ready(function(){
         history.unshift(stockName)
         $("#searchHistory").html("")
         for(var i = 0; i < limit; i++){
-            $("#searchHistory").append(`<div class = "col s2" id = "${history[i]}">${history[i]}</div>`)
+            if(history.length == i){
+                break;
+            }
+            $("#searchHistory").append(`<div class = "col s2" id = "${history[i]}">
+            <button>${history[i]}</button></div>`)
         }
     })
 })
