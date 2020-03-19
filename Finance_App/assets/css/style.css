@@ -1,6 +1,5 @@
-
 body {
-    background-color: rgb(135, 161, 186)
+    background-color: seagreen;
 }
 .header{
     margin: -2em 0;
@@ -72,7 +71,7 @@ body {
 }
 
 #searchBtn {
-    background-color: #555;
+    background-color: darkslategray;
     margin: 0px 0px 8px 0px;
 
 }
@@ -110,5 +109,3 @@ footer {
 /* search bar moved up.  Company name, still off to right.
  */
  /* news is not feeding into the boxes.  */
-
- /* "li" is showing up when elementis examined in console.  */
