@@ -14,67 +14,67 @@
 
 <body>
     <div class="header">
-            <div class="section">
-                <div class="row">
-                    <div class="col s12"></div>
-                        <h4><i class='fas fa-chart-line' style='font-size:48px'></i> Stock Searcher</h4>
-                    </div>
-                </div>
+        <div class="section">
+            <div class="row">
+                <div class="col s12"></div>
+                <h4><i class='fas fa-chart-line' style='font-size:48px'></i> Stock Searcher</h4>
             </div>
+        </div>
+    </div>
     </div>
 
     <div class="search">
-                <div class="row">
-                    <div √class="col s12">
-                        <form class="search-button">
-                            <input type="text" id="searchStock" placeholder="Search here..." required>
-                            <button type="submit" id='searchBtn'><i class="material-icons">search</i>Search</button>
-                            <ul id="results"></ul>  
-                        </form>
-                    </div>
+        <div class="row">
+            <div class="col s12">
+                <form class="search-button">
+                    <input type="text" id="searchStock" placeholder="Search here..." required>
+                    <button type="submit" id='searchBtn'><i class="material-icons">search</i>Search</button>
+                    <ul id="results"></ul>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div id="stock">
+                    <canvas id="myChart"></canvas>
                 </div>
-                
-                <div class="row">
-                    <div class="col s12 m6">
-                        <div id="stock">
-                            <canvas id="myChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="col s12 m6">
-                        <div class="carousel carousel-slider center" id="news">
-                            <!-- <div class="carousel carousel-slider center"> -->
-                                <div class="carousel-item grey lighten-3" id="0" href="#one!">
-                                  <!-- <h2>First Panel</h2>
+            </div>
+            <div class="col s12 m6">
+                <div class="carousel carousel-slider center" id="news">
+                    <!-- <div class="carousel carousel-slider center"> -->
+                    <div class="carousel-item grey lighten-3" id="0" href="#one!">
+                        <!-- <h2>First Panel</h2>
                                   <p class="white-text">This is your first panel</p> -->
-                                </div>
-                                <div class="carousel-item grey lighten-3" id="1" href="#two!">
-                                  <!-- <h2>Second Panel</h2>
-                                  <p class="white-text">This is your second panel</p> -->
-                                </div>
-                                <div class="carousel-item grey lighten-3" id="2" href="#three!">
-                                  <!-- <h2>Third Panel</h2>
-                                  <p class="white-text">This is your third panel</p> -->
-                                </div>
-                                <div class="carousel-item grey lighten-3" id="3" href="#four!">
-                                  <!-- <h2>Fourth Panel</h2>
-                                  <p class="white-text">This is your fourth panel</p> -->
-                                </div>
-                            <!-- </div> -->
-                        </div>
                     </div>
+                    <div class="carousel-item grey lighten-3" id="1" href="#two!">
+                        <!-- <h2>Second Panel</h2>
+                                  <p class="white-text">This is your second panel</p> -->
+                    </div>
+                    <div class="carousel-item grey lighten-3" id="2" href="#three!">
+                        <!-- <h2>Third Panel</h2>
+                                  <p class="white-text">This is your third panel</p> -->
+                    </div>
+                    <div class="carousel-item grey lighten-3" id="3" href="#four!">
+                        <!-- <h2>Fourth Panel</h2>
+                                  <p class="white-text">This is your fourth panel</p> -->
+                    </div>
+                    <!-- </div> -->
                 </div>
-                
-    </div>  
+            </div>
+        </div>
+
+    </div>
     <footer>
-       &copy;2020Stock
+        &copy;2020Stock
     </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-        <script src="./assets/js/searchBar.js"></script>
-        <script src="./assets/js/stockAPI.js"></script>
-        <script src="./assets/js/newsAPI.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="./assets/js/searchBar.js"></script>
+    <script src="./assets/js/stockAPI.js"></script>
+    <script src="./assets/js/newsAPI.js"></script>
 
 
 </body>
+
 </html>
