@@ -1,6 +1,5 @@
-
 body {
-    background-color: rgb(135, 161, 186)
+    background-color: rgb(135, 161, 186);
 }
 .header{
     margin: -2em 0;
@@ -37,7 +36,7 @@ body {
     background: #eee;
     -moz-border-radius: 3px 0 0 3px;
     -webkit-border-radius: 3px 0 0 3px;
-    border-radius: 3px 0 0 3px;
+    border-radius: 15px;
 }
 
 .search-button input:focus {
@@ -71,21 +70,22 @@ body {
     opacity: 0.8;
 }
 
-#searchBtn {
-    background-color: #555;
+.search-button button {
+    background-color: darkslategray;
     margin: 0px 0px 8px 0px;
+    border-radius: 15px;
 
 }
 
-.search .search-button button:before {
+/* .search .search-button button:before {
     content: '';
     position: absolute;
     border-width: 8px 8px 8px 8px; 
     border-style: solid solid solid none;
-    border-color: transparent #00918e transparent;
+    border-color: transparent darkslategray transparent;
     top: 12px;
     left: -6px;
-}
+} */
 .material-icons{
 font-size: 1rem;
 }
@@ -95,6 +95,7 @@ font-size: 1rem;
     background-color: #eeeeee;
     height: 400px;
     padding: 30px;
+    border-radius: 15px;
 }
 
 
@@ -110,5 +111,26 @@ footer {
 /* search bar moved up.  Company name, still off to right.
  */
  /* news is not feeding into the boxes.  */
-
- /* "li" is showing up when elementis examined in console.  */
+ @media screen and (max-width:640px){
+    
+    .header h4{
+        text-align: center;
+    }
+    
+    #stock {
+        margin-bottom: 0em;
+    }
+    #stock {
+        margin-bottom: 1em;
+    }
+   
+    .search-button button{
+        width: 330px;
+        border-radius: 15px;
+        background-color: grey;
+        margin: 0 auto;
+        float: left;
+        /* display: block;
+        margin: 0 auto;            */
+ }
+}
