@@ -11,30 +11,69 @@ $(document).ready(function() {
         event.preventDefault();
 
         var stock = $("#searchStock").val();
-        var settings = {
+
+        //for stock detail summary
+        var settingsSumm = {
+            "async": true,
+            "crossDomain": true,
+            "url": `https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-profile?symbol=${stock}`,
+            "method": "GET",
+            "headers": {
+                // DISABLED TO AVOID GOING OVER LIMIT
+                // "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+                // "x-rapidapi-key": "376342ab4cmsh4d978446e46bd45p1c3fccjsn474152d15e96"
+            }
+        }
+        
+        // for stock summary
+        $.ajax(settingsSumm).done(function (responseSumm) {
+            console.log(responseSumm);
+            $(`#symbolDiv`).html(`
+                <p class="center-align">
+                    <b><span id="symbol">${responseSumm.symbol}</span></b>
+                </p>
+            `)
+            $(`#countryDiv`).html(`
+                <p class="center-align">
+                    <span class="label"><b>Country:</b></span>
+                    </br>
+                    <span id="country">${responseSumm.assetProfile.country}</span>
+                </p>
+            `)
+            $(`#industryDiv`).html(`
+                <p class="center-align">
+                    <span class="label"><b>Industry:</b></span>
+                    </br>
+                    <span id="country">${responseSumm.assetProfile.industry}</span>
+                </p>
+            `)
+        });
+
+
+        //for stock news headlines
+        var settingsNews = {
             "async": true,
             "crossDomain": true,
             "url": `https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-news?region=US&category=${stock}`,
             "method": "GET",
             "headers": {
-                "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                "x-rapidapi-key": "ce81aca087msh56dfbd45fc61707p19827bjsnb24f7ca049eb"
+                // DISABLED TO AVOID GOING OVER LIMIT
+                // "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+                // "x-rapidapi-key": "376342ab4cmsh4d978446e46bd45p1c3fccjsn474152d15e96"
             }
         };
 
-        $.ajax(settings).done(function(response) {
-            console.log(response);
+        $.ajax(settingsNews).done(function(responseNews) {
+            console.log(responseNews);
 
             for (var i = 0; i < 4; i++) {
                 $(`#${i}`).html(`
-                    <a href=${response.items.result[i].link}>
-                        <h2>${ response.items.result[i].title}</h2>
+                    <a href=${responseNews.items.result[i].link}>
+                        <h2 class="newsTitle">${responseNews.items.result[i].title}</h2>
                     </a>
-                    <p>Published by: ${ response.items.result[i].publisher} </p>
-                    <p> ${response.items.result[i].summary} </p>
+                    <p class="newsStory left-align"> ${responseNews.items.result[i].summary} </p>
                 `)    
             };
         });
-
     });
 });
