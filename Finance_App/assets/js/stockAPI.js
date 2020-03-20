@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let labels = []
     let data = []
-      $("#searchBtn").on("click", function() {
+      $("button").on("click", function() {
         event.preventDefault();
         let stock = $("#searchStock").val();
         let queryURL = `https://sandbox.iexapis.com/stable/stock/${stock}/chart/1m?token=Tpk_fdd55ae4ce7241a583109376b956b80f`
