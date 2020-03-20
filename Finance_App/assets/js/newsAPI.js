@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 $(document).ready(function() {
 
-    $("button").on("click", function() {
+    $(".search-button").on("submit", function() {
         event.preventDefault();
 
         var stock = $("#searchStock").val();

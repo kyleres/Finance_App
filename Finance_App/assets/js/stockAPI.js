@@ -1,7 +1,7 @@
 $(document).ready(function(){
     let labels = []
     let data = []
-      $("button").on("click", function() {
+      $(".search-button").on("submit", function() {
         event.preventDefault();
         let stock = $("#searchStock").val();
         let queryURL = `https://sandbox.iexapis.com/stable/stock/${stock}/chart/1m?token=Tpk_fdd55ae4ce7241a583109376b956b80f`
@@ -10,7 +10,7 @@ $(document).ready(function(){
             method: "GET"
         }).then(function(response){
             console.log(response)
-
+            history.unshift(stock)
             for ( let i = 0; i < response.length; i++){
                 labels.push(response[i].label)
                 data.push(response[i].close)
