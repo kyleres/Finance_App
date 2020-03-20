@@ -10,7 +10,16 @@ $(document).ready(function(){
             method: "GET"
         }).then(function(response){
             console.log(response)
-            history.unshift(stock)
+            if (!history.includes(stock)){
+                history.unshift(stock)
+            }
+            $("#searchHistory").html("")
+            for(var i = 0; i < limit; i++){
+                if(history.length == i){
+                    break;
+                }
+                $("#searchHistory").append(`<div class = "historyItem col s6" id = "${history[i]}">${history[i]}</div>`)
+            }
             for ( let i = 0; i < response.length; i++){
                 labels.push(response[i].label)
                 data.push(response[i].close)
@@ -27,6 +36,7 @@ $(document).ready(function(){
                 },
                 options: {}
             });
+            historyItemClick()
 
         })
 
