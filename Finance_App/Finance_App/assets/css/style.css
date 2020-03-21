@@ -1,0 +1,231 @@
+body {
+    background-color: rgb(135, 161, 186);
+}
+.header{
+    margin: -2em 0;
+}
+.header h4 {
+    font-family:  'Courier New', Courier, monospace;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+}
+h5{
+    font-family:  'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    /* text-decoration: underline; */
+    background-color: #555;
+    border-radius: 15px;
+}
+
+li{
+    color: white;
+    overflow: auto;
+    cursor: pointer;
+    
+}
+li:hover{
+    color: gray;
+}
+
+.search {
+    margin: 0px auto 50px auto;
+}
+
+.search-button {
+    width: 100%;
+    padding: 15px;
+    margin: 8px auto 130px auto;
+}
+
+.search .search-button input {
+    width: 300px;
+    height: 10px;
+    padding: 20px 15px;
+    float: left;
+    font: 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    border: 0;
+    background: #eee;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 15px;
+}
+
+.search-button input:focus {
+    outline: 0;
+    background: #fff;
+}
+
+.search-button input::-webkit-input-placeholder {
+    color: #cccccc;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+.search-button button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    height: 40px;
+    width: 110px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    background: #00918e;
+    cursor: pointer;
+}
+
+.search .search-button button:hover {
+    opacity: 0.8;
+}
+
+.search-button button {
+    background-color: darkslategray;
+    margin: 0px 0px 8px 0px;
+    border-radius: 15px;
+
+}
+
+/* .search .search-button button:before {
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 8px; 
+    border-style: solid solid solid none;
+    border-color: transparent darkslategray transparent;
+    top: 12px;
+    left: -6px;
+} */
+.material-icons{
+font-size: 1rem;
+}
+
+h5 {
+    text-align: center;
+}
+/* 
+#stockHeader {
+    background-color: #fff;
+    height: 50px;
+    margin-bottom: 45px;
+} */
+
+#symbol {
+    font-size: 40px;
+    background-color: #555;
+    color: #fff;
+    height: 50px;
+    padding: 2px;
+    border-radius: 5px;
+
+}
+
+.label {
+    margin-top: 5px;
+    background-color:#fff;
+    height: 50px;
+    padding: 2px 2px 7px 2px;
+}
+
+#country {
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: #555;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+#industry {
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: #555;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.newsTitle {
+    margin: 15px;
+}
+
+.newsStory {
+    margin: 30px;
+    height: 65%;
+    overflow: auto;
+}
+
+#stock, #news {
+    background-color: #eeeeee;
+    height: 400px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#results{
+    float: left;
+}
+
+#searchHistory div {
+    cursor: pointer;
+    width: 170px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: white;
+    border: 2px solid gray;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+    /* margin-left: 20%; */
+    
+} 
+
+#searchHistory div:hover{
+    background-color: gray;
+}
+
+
+/* footer */
+footer {
+    background-color: #555;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+/* search bar moved up.  Company name, still off to right.
+ */
+ /* news is not feeding into the boxes.  */
+ @media screen and (max-width:640px){
+    
+    .header h4{
+        text-align: center;
+    }
+    
+    #stock {
+        margin-bottom: 0em;
+    }
+    #stock {
+        margin-bottom: 1em;
+    }
+   
+    .search-button button{
+        width: 330px;
+        border-radius: 15px;
+        background-color: grey;
+        margin: 0 auto;
+        float: left;
+        /* display: block;
+        margin: 0 auto;            */
+ }
+}
