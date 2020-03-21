@@ -1,5 +1,5 @@
 let history = []
-let limit = 6
+let limit = 8
 let currentCount = 0
 function init(){
     var retrive = JSON.parse(localStorage.getItem("history"))
