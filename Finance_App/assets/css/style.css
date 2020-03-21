@@ -91,6 +91,60 @@ body {
 font-size: 1rem;
 }
 
+h5 {
+    text-align: center;
+}
+
+#stockHeader {
+    background-color: #fff;
+    height: 50px;
+    margin-bottom: 45px;
+}
+
+#symbol {
+    font-size: 40px;
+    background-color: #555;
+    color: #fff;
+    height: 50px;
+    padding: 2px;
+    border-radius: 5px;
+
+}
+
+.label {
+    margin-top: 5px;
+    background-color:#fff;
+    height: 50px;
+    padding: 2px 2px 7px 2px;
+}
+
+#country {
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: #555;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+#industry {
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: #555;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.newsTitle {
+    margin: 15px;
+}
+
+.newsStory {
+    margin: 30px;
+    height: 65%;
+    overflow: auto;
+}
 
 #stock, #news {
     background-color: #eeeeee;
@@ -99,7 +153,18 @@ font-size: 1rem;
     border-radius: 15px;
 }
 
+#results{
+    float: left;
+}
 
+#searchHistory div {
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid gray;
+    background-color: lightgray;
+}
 
 /* footer */
 footer {
