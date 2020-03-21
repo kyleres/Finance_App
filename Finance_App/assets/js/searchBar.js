@@ -1,3 +1,26 @@
+let history = []
+let limit = 6
+let currentCount = 0
+function init(){
+    var retrive = JSON.parse(localStorage.getItem("history"))
+    if (retrive !== null){
+        history = retrive
+    }
+}
+function historyItemClick(){
+    $(".historyItem").on("click", function() {
+        let clickVal = $(this).attr('id')
+        $('#searchStock').val(clickVal).submit()
+    })
+}
+init()
+for(var i = 0; i < limit; i++){
+    if(history.length == i){
+        break;
+    }
+    $("#searchHistory").append(`<div class = "historyItem col s6" id = "${history[i]}">${history[i]}</div>`)
+}
+historyItemClick()
 $(document).ready(function(){
   
     $('.search-button').on('keyup', function(){

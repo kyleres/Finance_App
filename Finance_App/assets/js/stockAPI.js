@@ -4,6 +4,9 @@ $(document).ready(function(){
       $(".search-button").on("submit", function() {
         event.preventDefault();
         let stock = $("#searchStock").val();
+        if (stock === "") {
+            displayMessage("error", "Stock name cannot be blank");
+        }
         let queryURL = `https://sandbox.iexapis.com/stable/stock/${stock}/chart/1m?token=Tpk_fdd55ae4ce7241a583109376b956b80f`
         $.ajax({
             url: queryURL,
@@ -12,6 +15,8 @@ $(document).ready(function(){
             console.log(response)
             if (!history.includes(stock)){
                 history.unshift(stock)
+                localStorage.setItem("history", JSON.stringify(history));
+                console.log(localStorage.getItem("history"))
             }
             $("#searchHistory").html("")
             for(var i = 0; i < limit; i++){

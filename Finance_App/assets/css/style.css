@@ -51,42 +51,6 @@ body {
     font-style: italic;
 }
 
-
-.search-button button {
-    overflow: visible;
-    position: relative;
-    float: right;
-    border: 0;
-    padding: 0;
-    height: 40px;
-    width: 110px;
-    font-weight: 500;
-    color: #fff;
-    text-transform: uppercase;
-    background: #00918e;
-    cursor: pointer;
-}
-
-.search .search-button button:hover {
-    opacity: 0.8;
-}
-
-.search-button button {
-    background-color: darkslategray;
-    margin: 0px 0px 8px 0px;
-    border-radius: 15px;
-
-}
-
-/* .search .search-button button:before {
-    content: '';
-    position: absolute;
-    border-width: 8px 8px 8px 8px; 
-    border-style: solid solid solid none;
-    border-color: transparent darkslategray transparent;
-    top: 12px;
-    left: -6px;
-} */
 .material-icons{
 font-size: 1rem;
 }
