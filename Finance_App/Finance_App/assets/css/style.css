@@ -14,6 +14,7 @@ body {
     color: #fff;
     padding-top: 1em;
     padding-bottom: 1em;
+    
 }
 h5{
     font-family:  'Courier New', Courier, monospace;
@@ -24,22 +25,27 @@ h5{
     background-color: #555;
     border-radius: 15px;
 }
+
 li{
     color: white;
     overflow: auto;
     cursor: pointer;
+    
 }
 li:hover{
     color: gray;
 }
+
 .search {
     margin: 0px auto 50px auto;
 }
+
 .search-button {
     width: 100%;
     padding: 15px;
     margin: 8px auto 130px auto;
 }
+
 .search .search-button input {
     width: 300px;
     height: 10px;
@@ -52,12 +58,14 @@ li:hover{
     -webkit-border-radius: 3px 0 0 3px;
     border-radius: 15px;
 }
+
 .search-button input:focus {
     outline: 0;
     background: #fff;
 }
+
 .search-button input::-webkit-input-placeholder {
-    color: #CCCCCC;
+    color: #cccccc;
     font-weight: normal;
     font-style: italic;
 }
@@ -101,15 +109,17 @@ li:hover{
 .material-icons{
 font-size: 1rem;
 }
+
 h5 {
     text-align: center;
 }
-/*
+/* 
 #stockHeader {
     background-color: #fff;
     height: 50px;
     margin-bottom: 45px;
 } */
+
 #symbol {
     font-size: 40px;
     background-color: #555;
@@ -117,13 +127,16 @@ h5 {
     height: 50px;
     padding: 2px;
     border-radius: 5px;
+
 }
+
 .label {
     margin-top: 5px;
     background-color:#fff;
     height: 50px;
     padding: 2px 2px 7px 2px;
 }
+
 #country {
     font-size: 15px;
     margin-top: 5px;
@@ -132,6 +145,7 @@ h5 {
     padding: 2px;
     border-radius: 5px;
 }
+
 #industry {
     font-size: 15px;
     margin-top: 5px;
@@ -140,23 +154,28 @@ h5 {
     padding: 2px;
     border-radius: 5px;
 }
+
 .newsTitle {
     margin: 15px;
 }
+
 .newsStory {
     margin: 30px;
     height: 65%;
     overflow: auto;
 }
+
 #stock, #news {
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
     height: 400px;
     padding: 30px;
     border-radius: 15px;
 }
+
 #results{
     float: left;
 }
+
 #searchHistory div {
     cursor: pointer;
     width: 170px;
@@ -168,10 +187,14 @@ h5 {
     text-transform: uppercase;
     padding: 5px;
     /* margin-left: 20%; */
-}
+    
+} 
+
 #searchHistory div:hover{
     background-color: gray;
 }
+
+
 /* footer */
 footer {
     background-color: #555;
@@ -179,19 +202,23 @@ footer {
     padding: 1em;
     text-align: center;
 }
+
 /* search bar moved up.  Company name, still off to right.
  */
  /* news is not feeding into the boxes.  */
  @media screen and (max-width:640px){
+    
     .header h4{
         text-align: center;
     }
+    
     #stock {
         margin-bottom: 0em;
     }
     #stock {
         margin-bottom: 1em;
     }
+   
     .search-button button{
         width: 330px;
         border-radius: 15px;
