@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    //var labels and data are used for chart js to draw line chart
-    let labels = []
-    let data = []
     //on submit event to get data from IEX cloud to show on line chart
-      $(".search-button").on("submit", function() {
+    $(".search-button").on("submit", function() {
         event.preventDefault();
+        //var labels and data are used for chart js to draw line chart
+        let labels = []
+        let data = []
         let stock = $("#searchStock").val();
         let queryURL = `https://sandbox.iexapis.com/stable/stock/${stock}/chart/1m?token=Tpk_fdd55ae4ce7241a583109376b956b80f`
         $.ajax({
@@ -37,8 +37,9 @@ $(document).ready(function(){
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'StockPrice',
-                        data: data
+                        label: 'Stock Price in USD',
+                        data: data,
+                        backgroundColor: '#045D56'
                     }]
                 },
                 options: {}
