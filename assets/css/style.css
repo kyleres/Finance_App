@@ -21,7 +21,6 @@ h5{
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
-    /* text-decoration: underline; */
     background-color: #555;
     border-radius: 15px;
 }
@@ -89,28 +88,12 @@ li:hover{
     border-radius: 15px;
 
 }
-
-/* .search .search-button button:before {
-    content: '';
-    position: absolute;
-    border-width: 8px 8px 8px 8px; 
-    border-style: solid solid solid none;
-    border-color: transparent darkslategray transparent;
-    top: 12px;
-    left: -6px;
-} */
 .material-icons{
-font-size: 1rem;
+    font-size: 1rem;
 }
 h5 {
     text-align: center;
 }
-/*
-#stockHeader {
-    background-color: #fff;
-    height: 50px;
-    margin-bottom: 45px;
-} */
 #symbol {
     font-size: 40px;
     background-color: #555;
@@ -157,6 +140,8 @@ h5 {
 }
 #results{
     float: left;
+    padding-left: 5px;
+    margin-top: 5px;
 }
 #searchHistory div {
     cursor: pointer;
@@ -168,21 +153,16 @@ h5 {
     text-align: center;
     text-transform: uppercase;
     padding: 5px;
-    /* margin-left: 20%; */
 }
 #searchHistory div:hover{
     background-color: gray;
 }
-/* footer */
 footer {
     background-color: #555;
     color: #fff;
     padding: 1em;
     text-align: center;
 }
-/* search bar moved up.  Company name, still off to right.
- */
- /* news is not feeding into the boxes.  */
  @media screen and (max-width:640px){
     .header h4{
         text-align: center;
@@ -199,7 +179,5 @@ footer {
         background-color: grey;
         margin: 0 auto;
         float: left;
-        /* display: block;
-        margin: 0 auto;            */
  }
 }
