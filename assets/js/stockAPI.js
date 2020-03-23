@@ -12,11 +12,15 @@ $(document).ready(function(){
             method: "GET"
         }).then(function(response){
             //if statement to check if searched stock has already been searched. If it has it will not add stock to history array
+            for (var i = history.length; i > 7; i--) {
+                history.pop()
+            }
             if (!history.includes(stock)){
                 history.unshift(stock)
                 localStorage.setItem("history", JSON.stringify(history));
                 console.log(localStorage.getItem("history"))
             }
+            console.log(history)
             //clear searchHistory array and display latest history array
             $("#searchHistory").html("")
             for(var i = 0; i < limit; i++){

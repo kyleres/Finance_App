@@ -20,8 +20,8 @@ $(document).ready(function() {
             "method": "GET",
             "headers": {
                 // DISABLED TO AVOID GOING OVER LIMIT
-                // "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                // "x-rapidapi-key": "376342ab4cmsh4d978446e46bd45p1c3fccjsn474152d15e96"
+                "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+                "x-rapidapi-key": "376342ab4cmsh4d978446e46bd45p1c3fccjsn474152d15e96"
             }
         }
         
@@ -58,8 +58,8 @@ $(document).ready(function() {
             "method": "GET",
             "headers": {
                 // DISABLED TO AVOID GOING OVER LIMIT
-                // "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-                // "x-rapidapi-key": "376342ab4cmsh4d978446e46bd45p1c3fccjsn474152d15e96"
+                "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+                "x-rapidapi-key": "376342ab4cmsh4d978446e46bd45p1c3fccjsn474152d15e96"
             }
         };
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
 
             for (var i = 0; i < 4; i++) {
                 $(`#${i}`).html(`
-                    <a href=${responseNews.items.result[i].link}>
+                    <a href=${responseNews.items.result[i].link} target="_blank">
                         <h2 class="newsTitle">${responseNews.items.result[i].title}</h2>
                     </a>
                     <p class="newsStory left-align"> ${responseNews.items.result[i].summary} </p>
