@@ -34,6 +34,7 @@ Technologies:
 6. [JQuery](https://jquery.com/) as JS library
 7. HTML, CSS and JS as basic building blocks
 
+![flytescreenshot](assets/flytescreenshot.png)
 
 Requirements
 ```
